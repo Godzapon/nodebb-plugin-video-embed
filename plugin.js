@@ -4,7 +4,7 @@ const
 youtube = '<div class="video-embed"><iframe src="//www.youtube.com/embed/$1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>',
 youtubeList = '<div class="video-embed"><iframe src="//www.youtube.com/embed/?list=$1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>',
 youtubeMatch = /<a href.*youtu(?:.*\/v\/|.*v\=|\.be\/)([A-Za-z0-9_\-]*).*<\/a>/g,
-youtubeListMatch = /<a href.*youtu(?:.*\/v\/|.*list\=|\.be\/)([A-Za-z0-9_\-]*).*<\/a>/g;
+youtubeListMatch = /<a href.*youtu(?:.*\/v\/|.*v\=|\.be\/).*list\=([A-Za-z0-9_\-]*).*<\/a>/g;
 
 exports.filterParsePost = function(data, callback) {
   if(!data || !data.postData || !data.postData.content) {
